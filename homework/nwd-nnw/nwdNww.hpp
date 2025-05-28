@@ -5,10 +5,16 @@ int NWD(int lhs, int rhs) {
     auto lhs_abs = std::abs(lhs);
     auto rhs_abs = std::abs(rhs);
 
-    for (int i = std::min(lhs_abs, rhs_abs); i > 0; i--) {
-        if ((0 == lhs_abs % i) && (0 == rhs_abs % i)) {
-            result = i;
-            break;
+    if (0 == lhs_abs) {
+        result = rhs_abs;
+    } else if (0 == rhs_abs) {
+        result = lhs_abs;
+    } else {
+        for (int i = std::min(lhs_abs, rhs_abs); i > 0; i--) {
+            if ((0 == lhs_abs % i) && (0 == rhs_abs % i)) {
+                result = i;
+                break;
+            }
         }
     }
 
