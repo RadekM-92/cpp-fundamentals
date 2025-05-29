@@ -30,3 +30,13 @@ std::string getErrorMessage(ErrorCode Err)
         break;
     }
 }
+
+bool doPasswordsMatch(std::string& str1, std::string& str2)
+{
+    if(0==str1.compare(str2)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
