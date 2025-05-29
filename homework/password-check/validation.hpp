@@ -9,3 +9,5 @@ enum class ErrorCode {
     PasswordNeedsAtLeastOneUppercaseLetter,
     PasswordsDoNotMatch
 };
+
+std::string getErrorMessage(ErrorCode);
