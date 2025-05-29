@@ -40,3 +40,13 @@ bool doPasswordsMatch(std::string& str1, std::string& str2)
         return false;
     }
 }
+
+std::string checkPasswordRules(std::string& str)
+{
+    if(std::rand()%2){
+        return "PasswordNeedsAtLeast*";
+    }
+    else{
+        return "Ok";
+    }
+}
