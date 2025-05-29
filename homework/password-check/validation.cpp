@@ -50,5 +50,13 @@ ErrorCode checkPasswordRules(const std::string& str)
         return ErrorCode::Ok;
     }
 }
+
+ErrorCode checkPassword(const std::string& str1, const std::string& str2)
+{
+    if(true == doPasswordsMatch(str1, str2)){
+        return ErrorCode::Ok;
+    }
+    else{
+        return checkPasswordRules(str1);
     }
 }
